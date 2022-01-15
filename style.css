@@ -54,14 +54,28 @@ h1,h2,h3,p {
     font-size: 16px;
     padding: 10px 24px;
     font-weight: 700;
+    transition: background-color 0.5s ease-in;
+}
+
+.btn:hover {
+    background-color: #ff4187
 }
 
 .btn span {
-    color: white;
+    color: rgb(255, 255, 255);
+
+}
+
+
+.btn .arrow-icon {
+    display: inline-block;
+    animation: move 0.5s infinite alternate;
 }
 
 .btn .fas {
     margin-left: 5px;
+    z-index: 2;
+
 }
 
 /* header */
@@ -117,6 +131,11 @@ hr {
 }
 
 .hero-section .container .text-section h1 {
+    flex-basis: 582px;
+    animation: ltr 1s;
+}
+
+.hero-section .container .text-section h1 {
     font-size: 52px;
 }
 
@@ -126,15 +145,12 @@ hr {
 
 
 .hero-section .image-section{
-    position: relative;
+    animation: rtl 1s;
 }
 
 
 .hero-section .image-section img{
-    position: absolute;
-    z-index: 1;
-    right: 44px;
-    top: 60px;
+
     height: 406px;
     width: 440px;   
 }
@@ -333,9 +349,127 @@ footer .container .fab {
 
 /* Animation */
 
+@keyframes rtl {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes ltr {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(30%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* responsiveness */
+
+/* Modible device */
+
+@media only screen and (max-width:688px) {
+
+.container {
+     width: 90%;
+ }
+
+ header .navbar {
+     flex-direction: column;
+ }
+
+ .logo-section {
+     margin-top: 15px;
+ }
+
+ header .container nav ul {
+    padding: 0px;
+
+ }
+
+ header .container nav ul li {
+     margin: 0;
+ } 
  
 
+ header .container nav ul li a {
+    font-size: 11px;
+    padding: 5px;
+ }
+
+ .hero-section .container{
+     flex-direction: column-reverse;
+     margin-top: 50px;
+
+ }
+ 
+
+ .hero-section .container .image-section img {
+     width: 200px;
+     height: 184px;
+ }
+
+ .hero-section .container .text-section h1{
+     font-size: 28px;
+ }
+
+ hr, .down-hr, .store-link {
+     display:none ;
+     width: 200px;
+ }
+  
+
+ .collection-section .collections {
+     grid-template-columns: repeat(1,1fr);
+ }
+
+ .review-section .reviews {
+     grid-template-columns: repeat(1,1fr);
+ }
+    
+}
 
 
+/* tablate devices */
+
+@media only screen and (min-width:688px) 
+and (max-width:992px) {
+    .container {
+        width: 80%;
+    }
+
+    header ul li a {
+        font-size: 12px;
+    }
+
+    .collection-section .collections {
+        grid-template-columns: repeat(2,1fr);
+    }
+   
+    .review-section .reviews {
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .hero-section .container{
+        flex-direction: column-reverse;
+        margin-top: 300px;
+       
+   
+    }
+    
+
+}
 
 
