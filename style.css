@@ -151,8 +151,8 @@ hr {
 
 .hero-section .image-section img{
 
-    height: 406px;
-    width: 440px;   
+    height: 460px;
+    width: 460px;   
 }
 
 
@@ -411,14 +411,14 @@ footer .container .fab {
 
  .hero-section .container{
      flex-direction: column-reverse;
-     margin-top: 50px;
+     margin-top: 80px;
 
  }
  
 
  .hero-section .container .image-section img {
      width: 200px;
-     height: 184px;
+     height: 200px;
  }
 
  .hero-section .container .text-section h1{
@@ -464,7 +464,7 @@ and (max-width:992px) {
     
     .hero-section .container{
         flex-direction: column-reverse;
-        margin-top: 300px;
+        margin-top: 350px;
        
    
     }
