@@ -233,6 +233,15 @@ hr {
     font-family: 'Poppins', sans-serif;
 }
 
+.collection-section .see-more {
+    margin-top: 15px;
+    text-align: end;
+}
+
+.collection-section .see-more span {
+    color:#E02C6D;
+}
+
 /* review section */
 
 .review-section {
@@ -322,8 +331,9 @@ footer .container .fab {
 }
 
 
+/* Animation */
 
-
+ 
 
 
 
