@@ -109,7 +109,7 @@ nav ul li {
 }
 
 hr {
-    width: 900px;
+    max-width: 900px;
     flex-direction: column;
     border: 0;
     height: 1px;
@@ -163,6 +163,7 @@ hr {
 }
 .store-link .container{
     height: 90px;
+    flex-wrap: wrap;
 }
 
 .store-link .stores {
@@ -425,9 +426,8 @@ footer .container .fab {
      font-size: 28px;
  }
 
- hr, .down-hr, .store-link {
-     display:none ;
-     width: 200px;
+ .store-link img {
+    width: 50px;
  }
   
 
